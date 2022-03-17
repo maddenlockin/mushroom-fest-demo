@@ -44,7 +44,7 @@ addFriendButton.addEventListener('click', () => {
     // get the name from the input
     // create a new friend object
     const newFriend = {
-        name: friendInputEl.value,
+        name: friendInputEl.value || randomName(),
         satisfaction: 2
     };
     // push it into the friends state array, passed in as an argument
@@ -93,3 +93,9 @@ function displayMushrooms() {
 
 displayFriends();
 displayMushrooms();
+
+function randomName() {
+    const names = ['Jason', 'Jianyu', 'Eleanor', 'Tahani', 'Chidi', 'Michael', 'Janet'];
+    const randomize = Math.floor(Math.random() * names.length);
+    return names[randomize];
+}
