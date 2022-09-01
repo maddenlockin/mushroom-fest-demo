@@ -13,6 +13,7 @@ export function renderFriend(friend) {
     div.classList.add('friend');
     nameEl.classList.add('name');
     emojiEl.classList.add('emoji');
+
     nameEl.textContent = friend.name;
 
     if (friend.satisfaction === 1) {
